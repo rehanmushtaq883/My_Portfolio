@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="./logo.svg" type="image/x-icon" />
+      <link rel="shortcut icon" href="assets/images/favicon.svg" type="image/x-icon" />
       <title>Rehan Ali — Frontend Developer</title>
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet" />
@@ -288,7 +288,7 @@
             font-size: clamp(1.1rem, 3vw, 1.6rem);
             font-weight: 600;
             color: var(--muted);
-            margin-bottom: 2rem;
+            min-height: 50px;
             opacity: 0;
             animation: fadeUp 0.8s 0.6s forwards;
          }
@@ -700,7 +700,7 @@
             background: var(--card);
             border: 1px solid var(--border);
             border-radius: 16px;
-            padding: 2rem;
+            padding: 1.5rem;
             transition: all 0.3s ease;
             position: relative;
             overflow: hidden;
@@ -748,6 +748,7 @@
             color: var(--muted);
             line-height: 1.6;
             margin-bottom: 1.2rem;
+            min-height: 66px;
          }
 
          .skill-bar-wrap {
@@ -876,7 +877,13 @@
             transform: scale(1.1);
             color: #000;
          }
-
+         .diable-btn {
+            opacity: 0.5;
+            cursor: default;
+         }
+         .diable-btn:hover {
+            transform: scale(1) !important;
+         }
          .project-body {
             padding: 1.5rem;
             flex: 1;
@@ -1065,10 +1072,12 @@
             margin-bottom: 0.1rem;
          }
 
-         .contact-info-item p {
+         .contact-info-item p,
+         .contact-info-item a {
             font-size: 0.95rem;
             color: var(--text);
             margin: 0;
+            text-decoration: none;
          }
 
          .form-control-custom {
@@ -1098,6 +1107,7 @@
          textarea.form-control-custom {
             min-height: 140px;
             resize: vertical;
+            resize: none;
          }
 
          /* ─── FOOTER ─── */
@@ -1114,8 +1124,9 @@
             margin: 0;
          }
 
-         footer p strong {
+         footer p a {
             color: var(--accent);
+            text-decoration: none;
          }
 
          .social-links {
@@ -1371,7 +1382,7 @@
          <div class="container">
             <div class="row align-items-center g-5">
                <div class="col-lg-6 hero-content">
-                  <div class="hero-eyebrow">Available for freelance work</div>
+                  <div class="hero-eyebrow">Available for work</div>
                   <h1 class="hero-name">
                      Rehan<br />
                      <span class="accent-line">Ali</span>
@@ -1388,16 +1399,16 @@
                   </div>
                   <div class="hero-stats">
                      <div class="stat-item">
-                        <div class="stat-num">3<span>+</span></div>
+                        <div class="stat-num">1.5<span>+</span></div>
                         <div class="stat-label">Years Experience</div>
                      </div>
                      <div class="stat-item">
-                        <div class="stat-num">40<span>+</span></div>
+                        <div class="stat-num">20<span>+</span></div>
                         <div class="stat-label">Projects Done</div>
                      </div>
                      <div class="stat-item">
-                        <div class="stat-num">25<span>+</span></div>
-                        <div class="stat-label">Happy Clients</div>
+                        <div class="stat-num">10<span>+</span></div>
+                        <div class="stat-label">Success Stories</div>
                      </div>
                   </div>
                </div>
@@ -1416,7 +1427,7 @@
                      </div>
                      <div class="skill-badge sb-2">
                         <div class="dot" style="background: #61dafb"></div>
-                        React.js
+                        tailwind css
                      </div>
                      <div class="skill-badge sb-3">
                         <div class="dot" style="background: #e34c26"></div>
@@ -1479,20 +1490,18 @@
                   <div class="about-text">
                      <p>Hey! I'm <strong>Rehan Ali</strong>, a passionate Frontend Developer based in Lahore, Pakistan. I specialize in building modern, responsive, and highly interactive web applications that deliver exceptional user experiences.</p>
                      <div class="about-highlight">"Great design is not just about how it looks — it's about how it works, feels, and flows."</div>
-                     <p>With 3+ years of experience in frontend development, I've worked across diverse industries — from SaaS platforms and e-commerce to agency websites and mobile-first dashboards. I bring both design sensibility and engineering precision to every project.</p>
+                     <p>With 1.5 years of experience in frontend development, I've worked across industry from e-commerce to agency websites and mobile-first dashboards. I bring both design sensibility and engineering precision to every project.</p>
                      <p>When I'm not coding, you'll find me exploring new design trends, contributing to open-source, or experimenting with creative CSS animations.</p>
                   </div>
                   <div class="skill-chips">
                      <span class="chip">HTML5</span>
                      <span class="chip">CSS3 / SASS</span>
                      <span class="chip">JavaScript</span>
-                     <span class="chip">React.js</span>
+                     <span class="chip">Tailwind Css</span>
                      <span class="chip">Bootstrap 5</span>
                      <span class="chip">Tailwind CSS</span>
-                     <span class="chip">GSAP</span>
                      <span class="chip">Figma</span>
                      <span class="chip">Git / GitHub</span>
-                     <span class="chip">RESTful APIs</span>
                   </div>
                </div>
             </div>
@@ -1509,26 +1518,6 @@
             </div>
 
             <div class="skills-grid">
-               <div class="skill-card reveal">
-                  <div class="skill-icon" style="background: rgba(247, 223, 30, 0.1); color: #f7df1e"><i class="bi bi-filetype-js"></i></div>
-                  <h4>JavaScript / ES6+</h4>
-                  <p>Modern JS including async/await, modules, closures, and DOM manipulation.</p>
-                  <div class="skill-bar-wrap">
-                     <div class="skill-bar" data-width="92" style="background: #f7df1e"></div>
-                  </div>
-                  <div class="skill-pct">92%</div>
-               </div>
-
-               <div class="skill-card reveal">
-                  <div class="skill-icon" style="background: rgba(97, 218, 251, 0.1); color: #61dafb"><i class="bi bi-code-slash"></i></div>
-                  <h4>React.js</h4>
-                  <p>Component architecture, hooks, state management, and React Router.</p>
-                  <div class="skill-bar-wrap">
-                     <div class="skill-bar" data-width="88" style="background: #61dafb"></div>
-                  </div>
-                  <div class="skill-pct">88%</div>
-               </div>
-
                <div class="skill-card reveal">
                   <div class="skill-icon" style="background: rgba(227, 76, 38, 0.1); color: #e34c26"><i class="bi bi-filetype-html"></i></div>
                   <h4>HTML5 / CSS3</h4>
@@ -1560,6 +1549,26 @@
                </div>
 
                <div class="skill-card reveal">
+                  <div class="skill-icon" style="background: rgba(247, 223, 30, 0.1); color: #f7df1e"><i class="bi bi-filetype-js"></i></div>
+                  <h4>JavaScript / ES6+</h4>
+                  <p>Modern Javascript including async/await, modules, closures, and DOM manipulation.</p>
+                  <div class="skill-bar-wrap">
+                     <div class="skill-bar" data-width="68" style="background: #f7df1e"></div>
+                  </div>
+                  <div class="skill-pct">92%</div>
+               </div>
+
+               <div class="skill-card reveal">
+                  <div class="skill-icon" style="background: rgba(255, 255, 255, 0.2); color: #000000"><i class="bi bi-github"></i></div>
+                  <h4>Git/GitHub</h4>
+                  <p>Version Control, CI/CD, and Collaborative Workflows</p>
+                  <div class="skill-bar-wrap">
+                     <div class="skill-bar" data-width="88" style="background: rgba(255, 255, 255, 0.7)"></div>
+                  </div>
+                  <div class="skill-pct">88%</div>
+               </div>
+
+               <div class="skill-card reveal">
                   <div class="skill-icon" style="background: rgba(0, 200, 83, 0.1); color: #00c853"><i class="bi bi-phone"></i></div>
                   <h4>Responsive Design</h4>
                   <p>Mobile-first approach, cross-browser compatibility, and accessibility.</p>
@@ -1574,7 +1583,7 @@
                   <h4>GSAP / Animations</h4>
                   <p>Scroll-triggered animations, timelines, SVG morphing, and micro-interactions.</p>
                   <div class="skill-bar-wrap">
-                     <div class="skill-bar" data-width="80" style="background: #ff6b35"></div>
+                     <div class="skill-bar" data-width="50" style="background: #ff6b35"></div>
                   </div>
                   <div class="skill-pct">80%</div>
                </div>
@@ -1613,49 +1622,22 @@
                <div class="col-md-6 col-lg-4 project-item reveal" data-cat="react ui">
                   <div class="project-card">
                      <div class="project-thumb" style="background: linear-gradient(135deg, #0f2027, #203a43, #2c5364)">
-                        🛒
+                        <div class="project-display">
+                           <img src="assets/images/Jme-electric.png" class="w-100" alt="JME Electric" />
+                        </div>
                         <div class="project-overlay">
-                           <a href="#" class="overlay-btn"><i class="bi bi-eye"></i></a>
-                           <a href="#" class="overlay-btn"><i class="bi bi-github"></i></a>
+                           <a href="https://jmeelectric.com/" target="_blank" class="overlay-btn"><i class="bi bi-eye"></i></a>
+                           <a href="https://github.com/rehanmushtaq883/JME-electric.git" target="_blank" class="overlay-btn"><i class="bi bi-github"></i></a>
                         </div>
                      </div>
                      <div class="project-body">
                         <div class="project-tags">
-                           <span class="project-tag">React</span>
-                           <span class="project-tag">Tailwind</span>
-                           <span class="project-tag">UI/UX</span>
+                           <span class="project-tag">HTML5/CSS3</span>
+                           <span class="project-tag">Bootstrap 5</span>
+                           <span class="project-tag">JavaScript ES6</span>
                         </div>
-                        <h3>ShopFlow — E-Commerce UI</h3>
-                        <p>A modern e-commerce storefront with cart, filters, wishlist, and fully animated product pages. Built with React and Tailwind CSS.</p>
-                        <div class="project-links">
-                           <a href="#" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
-                           <a href="#" class="project-link"><i class="bi bi-github"></i> Source</a>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-
-               <div class="col-md-6 col-lg-4 project-item reveal" data-cat="animation html">
-                  <div class="project-card">
-                     <div class="project-thumb" style="background: linear-gradient(135deg, #1a0533, #3d0066, #7c3aed)">
-                        ✨
-                        <div class="project-overlay">
-                           <a href="#" class="overlay-btn"><i class="bi bi-eye"></i></a>
-                           <a href="#" class="overlay-btn"><i class="bi bi-github"></i></a>
-                        </div>
-                     </div>
-                     <div class="project-body">
-                        <div class="project-tags">
-                           <span class="project-tag">GSAP</span>
-                           <span class="project-tag">Three.js</span>
-                           <span class="project-tag">Animation</span>
-                        </div>
-                        <h3>NebulaSite — Creative Agency</h3>
-                        <p>An immersive creative agency website featuring particle animations, scroll-triggered reveals, and 3D canvas backgrounds.</p>
-                        <div class="project-links">
-                           <a href="#" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
-                           <a href="#" class="project-link"><i class="bi bi-github"></i> Source</a>
-                        </div>
+                        <h3>JME Electric — Service Platform</h3>
+                        <p>A fully responsive frontend application. Features interactive service filtering, a dynamic booking form validation using semantic HTML.</p>
                      </div>
                   </div>
                </div>
@@ -1663,24 +1645,49 @@
                <div class="col-md-6 col-lg-4 project-item reveal" data-cat="react ui">
                   <div class="project-card">
                      <div class="project-thumb" style="background: linear-gradient(135deg, #001f3f, #003d80, #0070f3)">
-                        📊
+                        <div class="project-display">
+                           <img src="assets/images/shirmo.png" class="w-100" alt="Shirmo" />
+                        </div>
                         <div class="project-overlay">
-                           <a href="#" class="overlay-btn"><i class="bi bi-eye"></i></a>
-                           <a href="#" class="overlay-btn"><i class="bi bi-github"></i></a>
+                           <a href="https://shirmo.com/" target="_blank" class="overlay-btn"><i class="bi bi-eye"></i></a>
+                           <a href="javascript:void(0)" class="overlay-btn diable-btn"><i class="bi bi-github"></i></a>
                         </div>
                      </div>
                      <div class="project-body">
                         <div class="project-tags">
-                           <span class="project-tag">React</span>
-                           <span class="project-tag">Charts</span>
-                           <span class="project-tag">Dashboard</span>
+                           <span class="project-tag">HTML5</span>
+                           <span class="project-tag">Sneat</span>
+                           <span class="project-tag">Javascript</span>
                         </div>
-                        <h3>AdminPulse — SaaS Dashboard</h3>
-                        <p>A feature-rich admin dashboard with real-time charts, dark/light mode, role management, and responsive data tables.</p>
-                        <div class="project-links">
+                        <h3>Shirmo — E-Commerce Solution</h3>
+                        <p>A high-performance retail storefront featuring a custom-built shopping cart system. Optimized for fast load times and seamless mobile responsiveness.</p>
+                        <!-- <div class="project-links">
                            <a href="#" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
-                           <a href="#" class="project-link"><i class="bi bi-github"></i> Source</a>
+                           <a href="javascript:void(0)" class="project-link"><i class="bi bi-github"></i> Source</a>
+                        </div> -->
+                     </div>
+                  </div>
+               </div>
+
+               <div class="col-md-6 col-lg-4 project-item reveal" data-cat="animation html">
+                  <div class="project-card">
+                     <div class="project-thumb" style="background: linear-gradient(135deg, #1a0533, #3d0066, #7c3aed)">
+                        <div class="project-display">
+                           <img src="assets/images/ccc.png" class="w-100" alt="Colorado Car Care" />
                         </div>
+                        <div class="project-overlay">
+                           <a href="https://cocarcare.com/" target="_blank" class="overlay-btn"><i class="bi bi-eye"></i></a>
+                           <a href="https://github.com/rehanmushtaq883/colorado-car-care.git" target="_blank" class="overlay-btn"><i class="bi bi-github"></i></a>
+                        </div>
+                     </div>
+                     <div class="project-body">
+                        <div class="project-tags">
+                           <span class="project-tag">HTML%</span>
+                           <span class="project-tag">CSS3</span>
+                           <span class="project-tag">Anime.js</span>
+                        </div>
+                        <h3>CCC — Maintenance PLatform</h3>
+                        <p>A comprehensive frontend platform for vehicle diagnostics and service tracking. Features a responsive fleet-management UI.</p>
                      </div>
                   </div>
                </div>
@@ -1688,7 +1695,9 @@
                <div class="col-md-6 col-lg-4 project-item reveal" data-cat="html animation">
                   <div class="project-card">
                      <div class="project-thumb" style="background: linear-gradient(135deg, #0d1117, #1a2e1a, #00c853)">
-                        🍃
+                        <div class="project-display">
+                           <img src="assets/images/Jme-electric.png" alt="Electric Store" />
+                        </div>
                         <div class="project-overlay">
                            <a href="#" class="overlay-btn"><i class="bi bi-eye"></i></a>
                            <a href="#" class="overlay-btn"><i class="bi bi-github"></i></a>
@@ -1702,10 +1711,6 @@
                         </div>
                         <h3>GreenLife — Eco Brand Site</h3>
                         <p>A clean, nature-inspired brand website with smooth page transitions, parallax scrolling, and CSS-only animated illustrations.</p>
-                        <div class="project-links">
-                           <a href="#" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
-                           <a href="#" class="project-link"><i class="bi bi-github"></i> Source</a>
-                        </div>
                      </div>
                   </div>
                </div>
@@ -1713,7 +1718,9 @@
                <div class="col-md-6 col-lg-4 project-item reveal" data-cat="ui">
                   <div class="project-card">
                      <div class="project-thumb" style="background: linear-gradient(135deg, #2d0b00, #7b2d00, #ff6b35)">
-                        🎵
+                        <div class="project-display">
+                           <img src="assets/images/Jme-electric.png" alt="Electric Store" />
+                        </div>
                         <div class="project-overlay">
                            <a href="#" class="overlay-btn"><i class="bi bi-eye"></i></a>
                            <a href="#" class="overlay-btn"><i class="bi bi-github"></i></a>
@@ -1727,10 +1734,6 @@
                         </div>
                         <h3>GrooveBox — Music Player App</h3>
                         <p>A sleek music player UI with waveform visualization, playlist management, animated album art, and audio API integration.</p>
-                        <div class="project-links">
-                           <a href="#" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
-                           <a href="#" class="project-link"><i class="bi bi-github"></i> Source</a>
-                        </div>
                      </div>
                   </div>
                </div>
@@ -1738,7 +1741,9 @@
                <div class="col-md-6 col-lg-4 project-item reveal" data-cat="react html">
                   <div class="project-card">
                      <div class="project-thumb" style="background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460)">
-                        🏥
+                        <div class="project-display">
+                           <img src="assets/images/Jme-electric.png" alt="Electric Store" />
+                        </div>
                         <div class="project-overlay">
                            <a href="#" class="overlay-btn"><i class="bi bi-eye"></i></a>
                            <a href="#" class="overlay-btn"><i class="bi bi-github"></i></a>
@@ -1752,10 +1757,6 @@
                         </div>
                         <h3>MediCare — Healthcare Portal</h3>
                         <p>A fully responsive healthcare web app with appointment booking, doctor profiles, patient dashboard, and API integration.</p>
-                        <div class="project-links">
-                           <a href="#" class="project-link"><i class="bi bi-box-arrow-up-right"></i> Live Demo</a>
-                           <a href="#" class="project-link"><i class="bi bi-github"></i> Source</a>
-                        </div>
                      </div>
                   </div>
                </div>
@@ -1766,7 +1767,7 @@
       <!-- ═══════════════ EXPERIENCE ═══════════════ -->
       <section id="experience">
          <div class="container">
-            <div class="row g-5">
+            <div class="row g-5 gx-md-5 align-items-center">
                <div class="col-lg-4 reveal">
                   <div class="section-label">Journey</div>
                   <h2 class="section-title">Work Experience</h2>
@@ -1774,9 +1775,14 @@
                   <div class="mt-4 pt-3">
                      <div class="section-label" style="margin-bottom: 0.8rem">Education</div>
                      <div style="background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 1.2rem">
-                        <div style="font-family: var(--heading); font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 3px">B.S. Computer Science</div>
-                        <div style="font-size: 0.85rem; color: var(--muted)">University of the Punjab</div>
-                        <div style="font-size: 0.75rem; color: var(--accent); margin-top: 0.4rem; font-family: var(--heading); font-weight: 600">2019 — 2023</div>
+                        <div style="font-family: var(--heading); font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 3px">Intermediate</div>
+                        <div style="font-size: 0.85rem; color: var(--muted)">Government Associate College</div>
+                        <div style="font-size: 0.75rem; color: var(--accent); margin-top: 0.4rem; font-family: var(--heading); font-weight: 600">2020 — 2022</div>
+                        <div class="mt-2">
+                           <div style="font-family: var(--heading); font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 3px">Web Designing</div>
+                           <div style="font-size: 0.85rem; color: var(--muted)">PSDF | Punjab Skills Department Funds</div>
+                           <div style="font-size: 0.75rem; color: var(--accent); margin-top: 0.4rem; font-family: var(--heading); font-weight: 600">July-2024 — November-2024</div>
+                        </div>
                      </div>
                   </div>
                </div>
@@ -1785,44 +1791,16 @@
                   <div class="timeline">
                      <div class="timeline-item">
                         <div class="timeline-dot"></div>
-                        <div class="tl-period">Jan 2024 — Present</div>
-                        <div class="tl-role">Senior Frontend Developer</div>
-                        <div class="tl-company">TechNova Solutions · Full-time · Lahore</div>
-                        <div class="tl-desc">
-                           <ul>
-                              <li>Lead frontend development for a SaaS analytics platform serving 50k+ users</li>
-                              <li>Architected component library with React + Storybook, reducing dev time by 35%</li>
-                              <li>Implemented micro-frontend architecture for seamless team scaling</li>
-                              <li>Mentored 3 junior developers and conducted weekly code reviews</li>
-                           </ul>
-                        </div>
-                     </div>
-
-                     <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="tl-period">Jun 2022 — Dec 2023</div>
+                        <div class="tl-period">Jan 2025 — Present</div>
                         <div class="tl-role">Frontend Developer</div>
-                        <div class="tl-company">PixelCraft Agency · Full-time · Remote</div>
+                        <div class="tl-company">Rebash Digital · Full-time · Lahore</div>
                         <div class="tl-desc">
                            <ul>
-                              <li>Developed 20+ client websites with a focus on performance and animation</li>
-                              <li>Delivered pixel-perfect implementations from Figma designs</li>
-                              <li>Boosted average Lighthouse scores from 62 → 94 across projects</li>
-                              <li>Integrated RESTful APIs and third-party services into React apps</li>
-                           </ul>
-                        </div>
-                     </div>
-
-                     <div class="timeline-item">
-                        <div class="timeline-dot"></div>
-                        <div class="tl-period">Mar 2022 — May 2022</div>
-                        <div class="tl-role">Frontend Intern</div>
-                        <div class="tl-company">Devify Studios · Internship · Lahore</div>
-                        <div class="tl-desc">
-                           <ul>
-                              <li>Built and maintained responsive landing pages and UI components</li>
-                              <li>Learned agile workflow, Git branching, and professional code standards</li>
-                              <li>Contributed to an open-source UI kit still used in production</li>
+                              <li>Engineered high-performance web interfaces using HTML5, CSS3, and JavaScript (ES6+), ensuring 100% responsive, mobile-first layouts.</li>
+                              <li>Modernized development workflows by integrating Tailwind CSS, cutting styling time and boosting build efficiency.</li>
+                              <li>Developed custom UI components (comparison sliders, interactive counters), enhancing user engagement through pixel-perfect execution.</li>
+                              <li>Figma designs into clean, accessible code, maintaining strict design fidelity across all major browsers.</li>
+                              <li>Managed version control via Git/GitHub, collaborating effectively within team environments to deliver high-quality code.</li>
                            </ul>
                         </div>
                      </div>
@@ -1850,7 +1828,7 @@
                         <div class="contact-icon"><i class="bi bi-envelope"></i></div>
                         <div>
                            <h5>Email</h5>
-                           <p>rehan.ali@email.com</p>
+                           <a href="mailto:rehanmushtaqq@gmail.com">rehanmushtaqq@email.com</a>
                         </div>
                      </div>
 
@@ -1858,7 +1836,7 @@
                         <div class="contact-icon"><i class="bi bi-telephone"></i></div>
                         <div>
                            <h5>Phone</h5>
-                           <p>+92 300 1234567</p>
+                           <a href="tel:+92 3261855883">+92 3261855883</a>
                         </div>
                      </div>
 
@@ -1873,11 +1851,11 @@
                      <div style="border-top: 1px solid var(--border); margin-top: 1.5rem; padding-top: 1.5rem">
                         <h5 style="font-family: var(--heading); font-size: 0.78rem; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 1rem">FIND ME ON</h5>
                         <div class="social-links justify-content-start">
-                           <a href="#" class="social-link"><i class="bi bi-github"></i></a>
-                           <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-                           <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
-                           <a href="#" class="social-link"><i class="bi bi-instagram"></i></a>
-                           <a href="#" class="social-link"><i class="bi bi-dribbble"></i></a>
+                           <a href="https://github.com/rehanmushtaq883" class="social-link"><i class="bi bi-github"></i></a>
+                           <a href="https://www.linkedin.com/in/rehan-ali-6b5915352/" class="social-link"><i class="bi bi-linkedin"></i></a>
+                           <a href="javascript:void(0)" class="social-link"><i class="bi bi-twitter-x"></i></a>
+                           <a href="javascript:void(0)" class="social-link"><i class="bi bi-instagram"></i></a>
+                           <a href="javascript:void(0)" class="social-link"><i class="bi bi-dribbble"></i></a>
                         </div>
                      </div>
                   </div>
@@ -1918,13 +1896,13 @@
       <footer>
          <div class="container">
             <div class="social-links">
-               <a href="#" class="social-link"><i class="bi bi-github"></i></a>
-               <a href="#" class="social-link"><i class="bi bi-linkedin"></i></a>
-               <a href="#" class="social-link"><i class="bi bi-twitter-x"></i></a>
-               <a href="#" class="social-link"><i class="bi bi-dribbble"></i></a>
+               <a href="https://github.com/rehanmushtaq883" class="social-link"><i class="bi bi-github"></i></a>
+               <a href="https://www.linkedin.com/in/rehan-ali-6b5915352/" class="social-link"><i class="bi bi-linkedin"></i></a>
+               <a href="javascript:void(0)" class="social-link"><i class="bi bi-twitter-x"></i></a>
+               <a href="javascript:void(0)" class="social-link"><i class="bi bi-dribbble"></i></a>
             </div>
-            <p>Designed & Built by <strong>Rehan Ali</strong> · Frontend Developer · © 2025</p>
-            <p style="margin-top: 0.4rem; font-size: 0.75rem">Crafted with ❤️ using HTML, CSS, Bootstrap & JavaScript</p>
+            <p>Designed & Built by <a href="index.html">Rehan Ali</a> · Frontend Developer · © 2025</p>
+            <p style="margin-top: 0.4rem; font-size: 0.75rem">Crafted with Love using HTML, CSS, Bootstrap & JavaScript</p>
          </div>
       </footer>
 
@@ -1963,7 +1941,7 @@
          });
 
          // ─── TYPED EFFECT ───
-         const phrases = ["Frontend Developer", "UI/UX Enthusiast", "React Specialist", "Creative Coder", "Web Animator"];
+         const phrases = ["Frontend Developer", "UI/UX Specialist", "Problem Solver", "Creative Coder", "Web Animator"];
          let pi = 0,
             ci = 0,
             deleting = false;
